@@ -13,7 +13,6 @@ import javax.persistence.Id;
 
 @Entity(name="Comment")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 @Slf4j
 public class    CommentEntity {
@@ -26,7 +25,7 @@ public class    CommentEntity {
 
 
     @Builder
-    public CommentEntity(String username, String comment)
+    public CommentEntity(int idx, String created_at,String username, String comment)
     {
         if(username.isEmpty() || username.isBlank() || username.equals(null)){
             log.info("username을 입력하지 않아 랜덤 유저네임 생성하겠습니다.");

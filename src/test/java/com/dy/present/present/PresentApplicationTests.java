@@ -14,11 +14,7 @@ class PresentApplicationTests {
 
     @Test
     void contextLoads() {
-        for(int i = 0; i<10; i++){
 
-            CommentEntity commentEntity = new CommentEntity("","test");
-            service.save(commentEntity);
-        }
 
     }
 }

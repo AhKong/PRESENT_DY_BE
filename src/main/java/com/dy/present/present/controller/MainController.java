@@ -35,7 +35,7 @@ public class MainController {
     @PostMapping("/comment")
     public ResponseEntity<Void> addComment(@RequestBody CommentEntity commentEntity){
         log.info("댓글 등록할 내용 : {}",commentEntity.toString());
-;        commentService.save(commentEntity);
+        commentService.save(commentEntity);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
